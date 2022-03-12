@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+section.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("eduford_img/banner.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: all 0.32s ease;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 13px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 48px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.hero-btn:hover {
+    border: 2px solid #f44336;
+    background: #f44336;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media (max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links::before {
+        content: '';
+        position: absolute;
+    }
+    .nav-links {
+        position: fixed;
+        height: 100vh;
+        right: -200px;
+        top: 0px;
+        width: 200px;
+        text-align: left;
+        background: #f44336;
+        z-index: 3;
+        transition: .3s;
+    }
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+/* --course-- */
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.cousre h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.course .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.course-col:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:700px) {
+    .row {
+        flex-direction: column;
+    }
+    .campus-row {
+        flex-direction: column;
+    }
+    .cta h1 {
+        font-size: 24px;
+    }
+}
+
+/* ---campus--- */
+
+.campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+.campus-col {
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.campus-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff3f3;
+    opacity: 0;
+    transition: all 0.5s;
+    font-size: 26px;
+}
+
+.layer:hover h3 {
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* facilities */
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.facilities-col img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.facilities-col h3 {
+    text-align: left;
+    margin: 20px 0;
+    font-weight: bold;
+    word-spacing: 2px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.facilities-col p {
+    /* text-align: left;
+   line-height: 20px;
+    word-spacing: 2px;
+    font-size: 15px;
+    color: gray; */
+    padding: 0px;
+    text-align: left;
+}
+
+/* ---testimonial--- */
+
+section.testimonial {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.testimonial-col {
+    text-align: left;
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: rgba(248, 208, 205, 0.7);
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.testimonial-col p {
+    padding: 0;
+    ;
+    margin-bottom: 6px;
+}
+
+.testimonial-col img {
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    margin: 5px 10px 0 0px;
+}
+
+.testimonial-col .test h3 {
+    text-align: left;
+    font-weight: bold;
+    word-spacing: 2px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.testimonial-col i {
+    margin-top: 10px;
+    color: #f44336;
+}
+
+/* ---call to action-- */
+
+.COA {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 300px;
+}
+
+.CTA {
+    width: 80%;
+    margin: 100px auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.CTA h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* ---footer-- */
+
+footer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+footer h4 {
+    margin-bottom: 50px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .fa {
+    margin: 10px;
+    color: #f44336;
+}
+
+footer p .fa:nth-child(1) {
+    margin: 0px;
+}
+
+/* -----About us--- */
+
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/eduford_img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    margin-top: 70px;
+}
+
+/* ----About Us Content--- */
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: left;
+}
+
+.about-col h1 {
+    font-size: 35px;
+    margin: 10px 0px;
+    line-height: 50px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+}
+
+.about-col p {
+    margin-bottom: 20px;
+    padding: 0px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 20px;
+}
+
+.about-col img {
+    width: 100%;
+}
+
+.about-col .hero-btn {
+    color: #f44336;
+    margin-left: 50%;
+    border: 1px solid #f44336;
+    transform: translateX(-50%);
+    transition: all .5s ease-out;
+}
+
+.about-col .hero-btn:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+@media (max-width:700px) {
+    .about-us {
+        width: 100%;
+        margin: 0;
+    }
+    .about-us .hero-btn {
+        padding: 12px 15px;
+    }
+    .about-col h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+/* ---blog--- */
+
+.Blog-content {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+.Blog-content img {
+    width: 100%;
+}
+
+.Blog-left {
+    flex-basis: 65%;
+}
+
+.Blog-right {
+    flex-basis: 32%;
+}
+
+table {
+    margin: 0px;
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+}
+
+.Blog-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #f44336;
+    padding: 5px;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.blog-h1 h1 {
+    font-size: 30px;
+    word-spacing: 3px;
+}
+
+.Blog-content h1 {
+    font-size: 30px;
+    word-spacing: 3px;
+    margin: 25px 0px;
+}
+
+.Blog-content p {
+    padding-left: 0px;
+}
+
+.form {
+    border: 1px solid rgba(138, 140, 141, 0.432);
+    margin-top: 40px;
+    padding: 10px 20px;
+}
+
+.form input, .form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(138, 140, 141, 0.151);
+    border: none;
+    font-size: 15px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form h1 {
+    font-size: 20px;
+}
+
+.form .hero-btn {
+    color: #f44336;
+    margin-bottom: 20px;
+    border: 1px solid #f44336;
+    /* transform: translateX(-50%); */
+    transition: all .5s ease-out;
+}
+
+.form .hero-btn:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+@media (max-width:700px) {
+    .blog-h1 h1 {
+        font-size: 25px;
+    }
+    .Blog-content h1 {
+        font-size: 25px;
+    }
+    .Blog-right {
+        margin-top: 20px;
+    }
+    .Blog-content {
+        width: 90%;
+    }
+}
+
+
+/* ----contact-us--- */
+
+.contact{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-top: 60px;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+
+}
+.flx{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+   
+}
+.ico i{
+    font-size: 30px;
+
+    color:#f44336;
+}
+.con{
+    width: 80%;
+}
+.con h1{
+    font-size: 17px;
+    color: rgba(100, 93, 93, 0.979);
+}
+.con p{
+    padding-left: 0px;
+    padding-top:5px;
+}
+.contact-col:first-child{
+    flex-basis: 40%;
+}
+.contact-col:nth-child(2){
+    flex-basis: 50%;
+}
+ .contact-col .form{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    width: 100%;
+}
+.contact-col .form input, .contact-col .form textarea{
+    background-color: white;
+    border: 1px solid rgba(100, 93, 93, 0.281);;
+}
